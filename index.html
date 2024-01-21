@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Profiles</title>
+    <link rel="icon" href="GitHub_logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form id="form" onsubmit="return formSubmit()">
+        <div class="search-container">
+            <select id="reposPerPage" onchange="changeReposPerPage()">
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <input type="text" id="search" autofocus placeholder="Search a Github User Here" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 24 24" width="24" height="24" fill="#ffffff" style="cursor: pointer;" onclick="formSubmit()">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+            </svg>
+        </div>
+        
+    </form>
+    <main id="main">
+        <div id="loader" class="loader"></div>
+        <div id="user-card" class="card"></div>
+        <div id="repos" class="repos-container"></div>
+        <div id="pagination" class="pagination-container"></div>
+    </main>
+</body>
+</html>
